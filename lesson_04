@@ -1,0 +1,116 @@
+1) Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, мы должны получить на выходе объект, в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 мы должны получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+
+
+let number = prompt("Введите число от 0 до 999");
+
+function numberToObject(number) {
+
+    const numbers = number.split('');
+
+
+    while (numbers.length < 3) {
+        numbers.unshift(0);
+    }
+
+    let numberDivided = {};
+
+    if (numbers.length > 3) {
+        return null;
+
+    } else {
+        numberDivided['сотни'] = +numbers[0];
+        numberDivided['десятки'] = +numbers[1];
+        numberDivided['единицы'] = +numbers[2];
+        return numberDivided;
+    }
+}
+
+let newNumbers = numberToObject(number);
+
+if (newNumbers == null) {
+    console.log("Слишком большое число");
+
+} else {
+    console.log(newNumbers);
+
+}
+
+
+2) Для игры, реализованной на уроке, добавить возможность вывода хода номер n (номер задается пользователем)
+
+let levels = [
+	{
+		'1': {
+			lvlText: 'Налево пойдёшь - коня потеряешь, направо пойдёшь - жизнь потеряешь, прямо пойдёшь - жив будешь, да себя позабудешь',
+			answers: {
+				'1': 'Пойти налево',
+				'2': 'Пойти направо',
+				'3': 'Пойти прямо',
+				'4': 'Пойти назад'
+			}
+		}
+	},
+	{
+		'1': {
+			lvlText: 'Вы встретили Соловья-разбойника',
+			answers: {
+				'1': 'Сразиться с ним',
+				'2': 'Попробовать обойти',
+				'3': 'Предложить закурить'
+			}
+		},
+		'2': {
+			lvlText: 'Вы встретили Змея Горыныча',
+			answers: {
+				'1': 'Украсть сокровища',
+				'2': 'Сразиться с ним',
+				'3': 'Предложить закусить'
+			}
+		},
+		'3': {
+			lvlText: 'Вы встретили Варвару-красавицу',
+			answers: {
+				'1': 'Жениться на ней',
+				'2': 'Сразиться с ней',
+				'3': 'Подарить цветик-семицветик'
+			}
+		},
+       		'4': {
+           		 lvlText: 'Вы встретили строго друга',
+           		 answers: {
+           			'1': 'Пойти с ним пить пиво',
+            	  		'2': 'Позвать с собой',
+        	    		'3': 'Сразиться с ним'
+           		 }
+   		}
+	}
+];
+
+
+let endOfTheGame = false;
+let currentStage = 0;
+let userChoice = '1';
+
+while(!endOfTheGame) {
+	if(currentStage >= 0 && currentStage < levels.length){
+		let choices = '';
+		
+		for(let answer in levels[currentStage][userChoice].answers){
+			choices += answer + ' - ' + levels[currentStage][userChoice].answers[answer] + '\n';
+		}
+
+		userChoice = prompt(levels[currentStage][userChoice].lvlText + '\n' + choices);
+		currentStage++;
+	} else {
+		if(userChoice == '1') {
+			alert("И жили вы долго и счастливо!");
+			endOfTheGame = true;
+		} else if (userChoice == '2') {
+			alert("И сложили вы буйну голову!");
+			endOfTheGame = true;	
+		} else {
+			alert("Вот и сказочке конец!");
+			endOfTheGame = true;	
+		}			
+	}
+}
