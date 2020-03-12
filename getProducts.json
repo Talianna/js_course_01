@@ -1,56 +1,56 @@
 [
     {
         "id_product": 1,
-        "product_name": 'Notebook',
+        "product_name": "Notebook",
         "image": "img/notebook_1.jpg",
         "price": 2000
     },
     {
         "id_product": 2,
-        "product_name": 'Mouse',
-        "image": 'img/mouse_1.jpg',
+        "product_name": "Mouse",
+        "image": "img/mouse_1.jpg",
         "price": 20
     },
     {
         "id_product": 3,
-        "product_name": 'Keyboard',
-        "image": 'img/keyboard_1.jpg',
+        "product_name": "Keyboard",
+        "image": "img/keyboard_1.jpg",
         "price": 200
     },
     {
         "id_product": 4,
-        "product_name": 'Gamepad',
-        "image": 'img/gamepad_1.jpg',
+        "product_name": "Gamepad",
+        "image": "img/gamepad_1.jpg",
         "price": 50
     },
     {
         "id_product": 5,
-        "product_name": 'Mouse',
-        "image": 'img/mouse_2.jpg',
+        "product_name": "Mouse",
+        "image": "img/mouse_2.jpg",
         "price": 20
     },
     {
         "id_product": 6,
-        "product_name": 'Keyboard',
-        "image": 'img/keyboard_2.jpg',
+        "product_name": "Keyboard",
+        "image": "img/keyboard_2.jpg",
         "price": 200
     },
     {
         "id_product": 7,
-        "product_name": 'Notebook',
-        "image": 'img/notebook_2.jpg',
+        "product_name": "Notebook",
+        "image": "img/notebook_2.jpg",
         "price": 2000
     },
     {
         "id_product": 8,
-        "product_name": 'Mouse',
-        "image": 'img/mouse_3.jpg',
+        "product_name": "Mouse",
+        "image": "img/mouse_3.jpg",
         "price": 20
     },
     {
         "id_product": 9,
-        "product_name": 'Keyboard',
-        "image": 'img/keyboard_3.jpg',
+        "product_name": "Keyboard",
+        "image": "img/keyboard_3.jpg",
         "price": 200
     },
 ]
